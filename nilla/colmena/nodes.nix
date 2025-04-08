@@ -16,6 +16,12 @@
                 type = lib.types.string;
               };
 
+              allowLocalDeployment = lib.options.create {
+                description = "Whether local deployment is allowed or not.";
+                default.value = false;
+                type = lib.types.bool;
+              };
+
               privilegeEscalationCommand = lib.options.create {
                 description = "The command to use for privilege escalation.";
                 default.value = [ "doas" ];
