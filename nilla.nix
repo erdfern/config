@@ -1,6 +1,8 @@
 let
   pins = import ./npins;
 
+  disko = import pins.disko {};
+
   nilla = import pins.nilla;
 in
 nilla.create ({ config }:
@@ -24,9 +26,11 @@ in
     ./nilla
 
     "${pins.nilla-nixos}/modules/nixos.nix"
+    # "${disko}/module.nix"
   ];
 
   config = {
+    dummyding = disko;
     inputs = builtins.mapAttrs
       (name: pin: {
         src = pin;

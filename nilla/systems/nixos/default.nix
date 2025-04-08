@@ -1,5 +1,6 @@
 {
   includes = [
+    ./aaa
     ./adamite
     ./agate
     ./albite
@@ -10,6 +11,7 @@
 
   config.modules = {
     nilla = {
+      nixos-system-aaa= ./aaa;
       nixos-system-adamite = ./adamite;
       nixos-system-agate = ./agate;
       nixos-system-albite = ./albite;
