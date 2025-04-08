@@ -12,7 +12,7 @@
             options = {
               targetUser = lib.options.create {
                 description = "The user to deploy as.";
-                default.value = "short";
+                default.value = "lk";
                 type = lib.types.string;
               };
 

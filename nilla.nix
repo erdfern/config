@@ -30,7 +30,7 @@ in
   ];
 
   config = {
-    dummyding = disko;
+    # dummyding = disko;
     inputs = builtins.mapAttrs
       (name: pin: {
         src = pin;

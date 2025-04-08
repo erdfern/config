@@ -12,7 +12,7 @@
   imports = [
     ./hardware.nix
     # project.inputs.disko.result.packages.${pkgs.system}.icehouse
-    "${project.disko}/module.nix"
+    "${project.inputs.disko.result}/module.nix"
   ];
 
   config = {

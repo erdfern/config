@@ -40,19 +40,19 @@ in
     name = lib.mkOption {
       description = "The name to use for the user account.";
       type = lib.types.str;
-      default = "short";
+      default = "lk";
     };
 
     fullName = lib.mkOption {
       description = "The full name of the user.";
       type = lib.types.str;
-      default = "Jake Hamilton";
+      default = "Linus Keiser";
     };
 
     email = lib.mkOption {
       description = "The email address of the user.";
       type = lib.types.str;
-      default = "jake.hamilton@hey.com";
+      default = "linus@keiser.co";
     };
 
     initialPassword = lib.mkOption {
