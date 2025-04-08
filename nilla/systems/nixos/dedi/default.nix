@@ -10,6 +10,7 @@ in
         privilegeEscalationCommand = [ "sudo" ];
 
         tags = [ "server" "testing" ];
+        allowLocalDeployment = true;
       };
     };
 
