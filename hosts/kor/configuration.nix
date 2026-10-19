@@ -61,6 +61,11 @@
     web.enable = false;
   };
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   environment.systemPackages = [
     # pkgs.arduino-ide
     pkgs.arduino-cli
