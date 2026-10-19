@@ -164,7 +164,7 @@ in
           # ];
           # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/tools/package-management/lix/default.nix
           # stable, latest, git, lix_x_xx
-          nix.package = pkgs.lixPackageSets.git.lix;
+          nix.package = pkgs.lixPackageSets.stable.lix;
         })
       ];
     };
