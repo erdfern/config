@@ -10,7 +10,6 @@ let
     ublock-origin
     # TODO declare settings
     consent-o-matic
-    terms-of-service-didnt-read
     auto-tab-discard
     clearurls
     link-cleaner
