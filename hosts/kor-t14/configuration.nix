@@ -34,6 +34,11 @@
 
   environment.systemPackages = [ pkgs.colmena ];
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   # TEMP
   # nix.package = pkgs.lix;
   users.users = {
