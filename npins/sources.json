@@ -35,9 +35,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "08d11dc6bf2aacbfa35ac4977e67a43be6df0d94",
-      "url": "https://github.com/cachix/devenv/archive/08d11dc6bf2aacbfa35ac4977e67a43be6df0d94.tar.gz",
-      "hash": "sha256-xnsBRsEZA/cyNI9OoUlDrg1tGAzaO90yS2QXSUhhFyE="
+      "revision": "4a1138b49c3b0503c214e4b6e59102dbdd3282ca",
+      "url": "https://github.com/cachix/devenv/archive/4a1138b49c3b0503c214e4b6e59102dbdd3282ca.tar.gz",
+      "hash": "sha256-ks05AJY27rCF6KzuXIlmky0eZzNGgbSTfHKTr4j2rdg="
     },
     "disko": {
       "type": "Git",
@@ -139,9 +139,9 @@
       },
       "branch": "main",
       "submodules": true,
-      "revision": "9a9ca12ae9e484345915f8cbfa25ce7e028763a0",
+      "revision": "e293217606a18ef149b7ed39cd4ec2d100f12b68",
       "url": null,
-      "hash": "sha256-lCjuiDFoIsKRFUU7Fhy2VL177IrTI6QS0E3FP2IXV0c="
+      "hash": "sha256-0Ar9w259CbDXo0uN8+IBdXDON8DdfPPGZ19CryIacms="
     },
     "hyprpanel": {
       "type": "Git",
@@ -269,9 +269,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "cd43101f0acca8e8457242ce242d9a86f9e3c80f",
-      "url": "https://github.com/nix-community/nur/archive/cd43101f0acca8e8457242ce242d9a86f9e3c80f.tar.gz",
-      "hash": "sha256-XQmpcvEiRYWDhecP/PGqcYfOa856JmrUEm2mJ/wPpqI="
+      "revision": "044c5d536f630c2b92f13cfefedf3a9e1bb641bb",
+      "url": "https://github.com/nix-community/nur/archive/044c5d536f630c2b92f13cfefedf3a9e1bb641bb.tar.gz",
+      "hash": "sha256-e0hE+kidU8eHN/ZZFpvg3x3JzetAwmz77GTKGJJBdhQ="
     },
     "probe-rs-rules": {
       "type": "Git",
