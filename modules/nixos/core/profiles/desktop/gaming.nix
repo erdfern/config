@@ -14,6 +14,7 @@ in
       enable = false;
       #   capSysNice = true;
     };
+
     programs.steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -25,7 +26,7 @@ in
       extest.enable = true; # translate x11 input event to uinput (for steam input on wayland?)
       protontricks.enable = true;
 
-      extraCompatPackages = [ pkgs.proton-ge-bin ];
+      # extraCompatPackages = [ pkgs.proton-ge-bin ]; Symlink is better, e.g. for VortexLinux
 
       package = pkgs.steam.override {
         extraPkgs = pkgs: [
@@ -45,6 +46,12 @@ in
         # else [ package32 ] ++ extraPackages32);
       };
     };
+
+    # make GE-Proton available
+    systemd.tmpfiles.rules = [
+      "d  /home/${user}/.local/share/Steam/compatibilitytools.d 0755 ${user} users -"
+      "L+ /home/${user}/.local/share/Steam/compatibilitytools.d/GE-Proton - - - - ${pkgs.proton-ge-bin.steamcompattool}"
+    ];
 
     # udev rules for steam-supported controllers and such
     hardware.steam-hardware.enable = true;
@@ -85,10 +92,6 @@ in
 
         # nexusmods-app-unfree # unfree for RAR support; DISCONTINUEEEED :[
       ];
-      sessionVariables = {
-        STEAM_COMPAT_DATA_PATH = "/home/${me.user}/.local/share/Steam/steamapps/compatdata";
-        STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/${me.user}/.local/share/Steam/compatibilitytools.d";
-      };
     };
   };
 }
