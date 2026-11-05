@@ -23,7 +23,7 @@ in
       # gamescopeSession = { enable = true; };
 
       extest.enable = true; # translate x11 input event to uinput (for steam input on wayland?)
-      protontricks.enable = false;
+      protontricks.enable = true;
 
       extraCompatPackages = [ pkgs.proton-ge-bin ];
 
