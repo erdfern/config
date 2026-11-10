@@ -26,7 +26,6 @@ in
       enable = true;
       alsa.enable = true;
       pulse.enable = true; # pulse emulation
-      jack.enable = true;
 
       wireplumber.enable = true;
     };
