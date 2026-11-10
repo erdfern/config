@@ -34,7 +34,6 @@ in
         enable = true;
         # theme = 
       };
-      initrd.systemd.enable = lib.mkIf cfg.plymouth.enable true; # systemd-stage-1 
 
       # more silent boot
       consoleLogLevel = 3;
