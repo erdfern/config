@@ -36,6 +36,8 @@ in
         confirm_os_window_close = 0;
         background_opacity = "0.9";
 
+        remember_window_size = "no"; # otherwise, starts maximized on Hyprland...
+
         # performance, maybe at the cost of energy usage
         # input_delay = 0;
         input_delay = 3;
