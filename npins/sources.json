@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3659494a05fa5347b489aec8240af149caa11e6b",
-      "url": "https://github.com/nix-community/flake-firefox-nightly/archive/3659494a05fa5347b489aec8240af149caa11e6b.tar.gz",
-      "hash": "sha256-fd0+x8C1+yHpa4UaayG3Eubhrkfa4spB6xScgWrjzsg="
+      "revision": "3b7c22cde7c29c746ba40ce042737d5e4b05caef",
+      "url": "https://github.com/nix-community/flake-firefox-nightly/archive/3b7c22cde7c29c746ba40ce042737d5e4b05caef.tar.gz",
+      "hash": "sha256-P4JSbs5xad80jMaX9bLvxcN5V2ZbyFsZFO5O0EgBuSY="
     },
     "flake-compat": {
       "type": "Git",
@@ -139,9 +139,9 @@
       },
       "branch": "main",
       "submodules": true,
-      "revision": "4c3a8fe81feea899c894faec50e10cf01b301d2f",
+      "revision": "9a9ca12ae9e484345915f8cbfa25ce7e028763a0",
       "url": null,
-      "hash": "sha256-Yk1BkWXWKm3TRrxnTt1usF1/62U66iuvufaRxdxrG+8="
+      "hash": "sha256-lCjuiDFoIsKRFUU7Fhy2VL177IrTI6QS0E3FP2IXV0c="
     },
     "hyprpanel": {
       "type": "Git",
@@ -269,9 +269,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "0cd217c089a2f12a94facbf88aff7244603c056e",
-      "url": "https://github.com/nix-community/nur/archive/0cd217c089a2f12a94facbf88aff7244603c056e.tar.gz",
-      "hash": "sha256-YmPz3d1W0xCSiUD7O+4w25xageesOseD71aKTK9KcWc="
+      "revision": "cd43101f0acca8e8457242ce242d9a86f9e3c80f",
+      "url": "https://github.com/nix-community/nur/archive/cd43101f0acca8e8457242ce242d9a86f9e3c80f.tar.gz",
+      "hash": "sha256-XQmpcvEiRYWDhecP/PGqcYfOa856JmrUEm2mJ/wPpqI="
     },
     "probe-rs-rules": {
       "type": "Git",
