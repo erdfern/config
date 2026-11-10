@@ -11,57 +11,61 @@ let
     ;
 in
 {
-  config.lib.utils = {
-    loadDirsCond =
-      f: dir:
-      let
-        contents = readDir dir;
-      in
-      listToAttrs (
-        map
-          (n: {
-            name = n;
-            value = dir + "/${n}";
-          })
-          (filter (n: contents."${n}" == "directory" && f dir n) (attrNames contents))
-      );
-
-    loadDirsWithFile =
-      file:
-      lib.utils.loadDirsCond (
-        d: n:
+  config.lib.hiveUtils =
+    let
+      loadDirsCond =
+        f: dir:
         let
-          contents = readDir "${d}/${n}";
+          contents = readDir dir;
         in
-        (hasAttr file contents) && (contents.${file} == "regular")
-      );
+        listToAttrs (
+          map
+            (n: {
+              name = n;
+              value = dir + "/${n}";
+            })
+            (filter (n: contents."${n}" == "directory" && f dir n) (attrNames contents))
+        );
 
-    loadHostsFromDir =
-      dir: file:
-      let
-        hosts' =
+      loadDirsWithFile =
+        file:
+        loadDirsCond (
+          d: n:
           let
-            contents = readDir dir;
+            contents = readDir "${d}/${n}";
           in
-          filter (n: contents."${n}" == "directory") (attrNames contents);
-      in
-      concatMap
-        (
-          n:
-          let
-            contents = readDir "${dir}/${n}";
-            hasConfig = (hasAttr file contents) && (contents.${file} == "regular");
-          in
-          if hasConfig then
-            [
-              {
-                hostname = n;
-                configuration = import "${dir}/${n}/${file}";
-              }
-            ]
-          else
-            [ ]
-        )
-        hosts';
-  };
+          (hasAttr file contents) && (contents.${file} == "regular")
+        );
+
+      loadHostsFromDir =
+        dir: file:
+        let
+          hosts' =
+            let
+              contents = readDir dir;
+            in
+            filter (n: contents."${n}" == "directory") (attrNames contents);
+        in
+        concatMap
+          (
+            n:
+            let
+              contents = readDir "${dir}/${n}";
+              hasConfig = (hasAttr file contents) && (contents.${file} == "regular");
+            in
+            if hasConfig then
+              [
+                {
+                  hostname = n;
+                  configuration = import "${dir}/${n}/${file}";
+                }
+              ]
+            else
+              [ ]
+          )
+          hosts';
+    in
+    {
+      inherit loadDirsCond loadDirsWithFile loadHostsFromDir;
+    };
 }
